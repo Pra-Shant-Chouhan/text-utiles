@@ -5,12 +5,14 @@ export default function TextForm(props) {
         // console.log("Upper case was clickd")
         let newText = text.toUpperCase()
         setText(newText)
+        props.showAlert("Converted to UpperCase","success")
     }
 
     const handleLowerCaseClick = () => {
         // console.log("Upper case was clickd")
         let newText = text.toLowerCase()
         setText(newText)
+        props.showAlert("Converted to LowerCase","success")
     }
     const handleRemoveSpecilChrClick = () => {
     
@@ -19,23 +21,26 @@ export default function TextForm(props) {
         // let newText = text.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, "") //or write each specil charct
         let newText = text.replace(/[^a-z A-Z 0-9]/g, " ");
         // let newText = text.replace(/[^a-z A-Z 0-9]/g, "*");  //it removes special charcter and fill with star
-       
-
         setText(newText)
+        props.showAlert("All Special Charcter Removed","success")
+    
     }
 
     const handleClearCaseClick = () => {
         let newText = ''
         setText(newText)
+        props.showAlert("Clear all","success")
     }
     const handleCopy = () => {
         var text = document.getElementById("myBox");
         text.select();
         navigator.clipboard.writeText(text.value);
+        props.showAlert("Copied to ClippBord","success")
     }
     const handlRemExtraSpaces = () => {
         let newText = text.split(/[  ]+/ )
         setText(newText.join(" "))
+        props.showAlert("Clear All extra Spaces","success")
     }
     const handleOnChange = (event) => {
         // console.log("onChange");
