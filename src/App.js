@@ -23,6 +23,7 @@ function App() {
       setMode('dark')
       document.body.style.background = '#13134b';
       showAlert("Dark mode has been enabled", "success")
+      document.title = "TextUtilis-Dark Mode"
 
     }
     else {
