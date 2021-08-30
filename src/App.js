@@ -1,15 +1,15 @@
 import './App.css';
-import About from './component/About';
+// import About from './component/About';
 import Navbar from './component/Navbar';
 import TextForm from './component/TextForm';
 import React, { useState } from 'react'
 import Alert from './component/Alert';
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+// } from "react-router-dom";
 
 
 function App() {
@@ -52,24 +52,24 @@ function App() {
   }
   return (
     <>
-      <Router>
+      {/* <Router> */}
 
       <Navbar title="TextUtils" aboutText="About TextUtils" mode={mode} toggleMode={toggleMode} />
       {/* <Navbar/> */}
-        <Switch>
+        {/* <Switch> */}
           {/* /user --> Component 1     */}
           {/* /user/home --> Component 2 // to remove that bevaiyer of path we use exact path instant of path */}
-        <Route exact path="/about">
+        {/* <Route exact path="/about">
           <About />
-        </Route>
+        </Route> */}
 
-        <Route exact path="/">
+        {/* <Route exact path="/"> */}
           <TextForm showAlert={showAlert} heading="Enter The Text to Analyze" mode={mode} />
-        </Route>
-      </Switch>
+        {/* </Route> */}
+      {/* </Switch> */}
       
       <Alert alert={alert} />
-      </Router>
+      {/* </Router> */}
     </>
   );
 }
