@@ -33,9 +33,9 @@ export default function TextForm(props) {
         props.showAlert("Clear all","success")
     }
     const handleCopy = () => {
-        var text = document.getElementById("myBox");
-        text.select();
-        navigator.clipboard.writeText(text.value);
+        
+        
+        navigator.clipboard.writeText(text);
         props.showAlert("Copied to ClippBord","success")
     }
     const handlRemExtraSpaces = () => {
@@ -69,7 +69,7 @@ export default function TextForm(props) {
             </div>
             <div className="container" style= {{color: props.mode=== 'dark' ? 'white' : 'black'}}  >
                 <h3>Your Text Summary</h3>
-                <p><b> {text.split(" ").filter((element)=>{return element.length!==0}).length} </b>Words and &<b> {text.length} </b>Character</p>
+                <p><b> {text.split(/\s+/ ).filter((element)=>{return element.length!==0}).length} </b>Words and &<b> {text.length} </b>Character</p>
                 <p><b>{0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length } </b>--Minutes ro read in slow speed</p>
                 <p><b>{0.0033 * text.split(" ").filter((element)=>{return element.length!==0}).length}</b> --Minutes ro read in fast speed</p>
                 
