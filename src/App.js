@@ -29,7 +29,7 @@ function App() {
       setMode('dark')
       document.body.style.background = '#042743';
       showAlert("Dark mode has been enabled", "success")
-      document.title = "TextUtilis-Dark Mode"
+      // document.title = "TextUtilis-Dark Mode"
 
       // setIntervel for Installing app"
 

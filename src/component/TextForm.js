@@ -53,7 +53,7 @@ export default function TextForm(props) {
     return (
         <>
             <div className='container' style= {{color: props.mode=== 'dark' ? 'white' : 'black'}} >
-                <h3>{props.heading} </h3>
+                <h3 className="my-3">{props.heading} </h3>
                 <div className="my-3">
                     <textarea className="form-control" value={text} onChange={handleOnChange} style= {{backgroundColor: props.mode=== 'dark' ? '#13466e' : 'white' ,color: props.mode=== 'dark' ? 'white' : 'black' }} id="myBox" rows="9"></textarea>
                 </div>
@@ -69,8 +69,8 @@ export default function TextForm(props) {
             <div className="container" style= {{color: props.mode=== 'dark' ? 'white' : 'black'}}  >
                 <h3>Your Text Summary</h3>
                 <p><b> {text.split(" ").filter((element)=>{return element.length!==0}).length} </b>Words and &<b> {text.length} </b>Character</p>
-                <p><b>{0.008 * text.split(" ").length } </b>--Minutes ro read in slow speed</p>
-                <p><b>{0.0033 * text.split(" ").length}</b> --Minutes ro read in fast speed</p>
+                <p><b>{0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length } </b>--Minutes ro read in slow speed</p>
+                <p><b>{0.0033 * text.split(" ").filter((element)=>{return element.length!==0}).length}</b> --Minutes ro read in fast speed</p>
                 
                 <h3>Preview</h3>
                 <p>{ text.length >0 ? text: "Enter something To preview it Here"}</p>
