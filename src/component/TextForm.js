@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 export default function TextForm(props) {
+    
     const handleUperCaseClick = () => {
         // console.log("Upper case was clickd")
         let newText = text.toUpperCase()
@@ -53,17 +54,17 @@ export default function TextForm(props) {
     return (
         <>
             <div className='container' style= {{color: props.mode=== 'dark' ? 'white' : 'black'}} >
-                <h3 className="my-3">{props.heading} </h3>
+                <h3 className="my-3solv">{props.heading} </h3>
                 <div className="my-3">
                     <textarea className="form-control" value={text} onChange={handleOnChange} style= {{backgroundColor: props.mode=== 'dark' ? '#13466e' : 'white' ,color: props.mode=== 'dark' ? 'white' : 'black' }} id="myBox" rows="9"></textarea>
                 </div>
 
-                <button className="btn btn-info mx-2 my-2" onClick={handleUperCaseClick}>Convert Text to UpperCase</button>
-                <button className="btn btn-warning mx-2 my-2" onClick={handleLowerCaseClick}>Convert Text to LowerCase</button>
-                <button className="btn btn-danger mx-2 my-2 " onClick={handleClearCaseClick}>Clear Text</button>
-                <button className="btn btn-success mx-2 my-2" onClick={handleRemoveSpecilChrClick }>Remove Speical Charcter</button>
-                <button className="btn btn-dark mx-2 my-2" onClick={handleCopy}>Copy</button>
-                <button className="btn btn-primary mx-2 my-2" onClick={handlRemExtraSpaces}>Remove Extra spaces</button>
+                <button disabled = {text.length===0} className="btn btn-info mx-2 my-2" onClick={handleUperCaseClick}>Convert Text to UpperCase</button>
+                <button disabled = {text.length===0} className="btn btn-warning mx-2 my-2" onClick={handleLowerCaseClick}>Convert Text to LowerCase</button>
+                <button disabled = {text.length===0} className="btn btn-danger mx-2 my-2 " onClick={handleClearCaseClick}>Clear Text</button>
+                <button disabled = {text.length===0} className="btn btn-success mx-2 my-2" onClick={handleRemoveSpecilChrClick }>Remove Speical Charcter</button>
+                <button disabled = {text.length===0} className="btn btn-dark mx-2 my-2" onClick={handleCopy}>Copy</button>
+                <button disabled = {text.length===0} className="btn btn-primary mx-2 my-2" onClick={handlRemExtraSpaces}>Remove Extra spaces</button>
 
             </div>
             <div className="container" style= {{color: props.mode=== 'dark' ? 'white' : 'black'}}  >
