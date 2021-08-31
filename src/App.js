@@ -56,6 +56,7 @@ function App() {
 
       <Navbar title="TextUtils" aboutText="About TextUtils" mode={mode} toggleMode={toggleMode} />
       {/* <Navbar/> */}
+          <Alert alert={alert} />
         {/* <Switch> */}
           {/* /user --> Component 1     */}
           {/* /user/home --> Component 2 // to remove that bevaiyer of path we use exact path instant of path */}
@@ -68,7 +69,6 @@ function App() {
         {/* </Route> */}
       {/* </Switch> */}
       
-      <Alert alert={alert} />
       {/* </Router> */}
     </>
   );
