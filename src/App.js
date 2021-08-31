@@ -27,7 +27,7 @@ function App() {
   const toggleMode = () => {
     if (mode === 'light') {
       setMode('dark')
-      document.body.style.background = '#13134b';
+      document.body.style.background = '#042743';
       showAlert("Dark mode has been enabled", "success")
       document.title = "TextUtilis-Dark Mode"
 
